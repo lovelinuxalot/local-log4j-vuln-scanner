@@ -42,6 +42,7 @@ Use the `--exclude` flag to exclude subdirectories from being scanned. Can be us
 
 If class files indicating one of the vulnerabilities are found,
 messages like the following are printed to standard output:
+
 ``` console
 ./local-log4j-vuln-scanner - a simple local log4j vulnerability scanner
 
@@ -54,6 +55,7 @@ Scan finished
 # Using the patch tool
 
 **Caution:** Use this at your own risk and keep the original JAR files.
+
 ```
 $ ./local-log4j-vuln-patcher log4j-core-2.14.1.jar log4j-core-2.14.1-patched.jar
 Filtering out org/apache/logging/log4j/core/pattern/MessagePatternConverter.class (log4j 2.14)
@@ -67,10 +69,12 @@ Writing to log4j-core-2.14.1-patched.jar done
 Install a [Go compiler](https://golang.org/dl).
 
 Run the following commands in the checked-out repository:
+
 ```
 go build -o local-log4j-vuln-scanner ./scanner
 go build -o local-log4j-vuln-patcher ./patcher
 ```
+
 (Add the appropriate `.exe` extension on Windows systems, of course.)
 
 # License
